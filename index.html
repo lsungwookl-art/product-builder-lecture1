@@ -32,6 +32,28 @@
     <div class="results" id="results"></div>
 
     <button class="reset-btn" id="resetBtn" style="display:none;">초기화</button>
+
+    <section class="contact-section">
+      <h2 class="contact-title">📩 제휴 문의</h2>
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqeyedrg" method="POST">
+        <div class="form-group">
+          <label for="name">이름 / 회사명</label>
+          <input type="text" id="name" name="name" placeholder="홍길동 / (주)회사명" required />
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" rows="4" placeholder="제휴 관련 내용을 자유롭게 작성해 주세요." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="submit-text">문의 보내기</span>
+        </button>
+        <p class="form-success" id="formSuccess" style="display:none;">✅ 문의가 접수되었습니다. 빠르게 답변드리겠습니다!</p>
+      </form>
+    </section>
   </div>
 
   <script defer type="text/javascript" src="/main.js"></script>
