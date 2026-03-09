@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      ".git/**",
+      ".idx/**",
+      ".vscode/**",
+      ".claude/**",
+      "firebase-debug.log",
+      "README.md",
+      "GEMINI.md"
+    ]
+  }
+}
