@@ -3,40 +3,211 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>로또 번호 추첨기</title>
+  <title>로또 번호 추첨기 - 무료 로또 번호 자동생성 및 당첨 정보</title>
+  <meta name="description" content="무료 로또 번호 자동생성기. 1~10게임 동시 추첨, 당첨 확률 분석, 번호 선택 팁까지 로또에 관한 모든 정보를 제공합니다." />
+  <meta name="keywords" content="로또, 로또번호, 로또추첨, 로또자동생성, 로또번호생성기, 로또당첨확률" />
   <meta name="google-adsense-account" content="ca-pub-5570666195506674">
+  <meta property="og:title" content="로또 번호 추첨기 - 무료 로또 번호 자동생성" />
+  <meta property="og:description" content="무료 로또 번호 자동생성기. 1~10게임 동시 추첨 및 당첨 정보 제공." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lottocreate-71bc4.web.app/" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5570666195506674" crossorigin="anonymous"></script>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>🎱 로또 번호 추첨기</h1>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">🎱 LottoCreate</a>
+      <div class="nav-links">
+        <a href="#generator">번호추첨</a>
+        <a href="#info">당첨정보</a>
+        <a href="#tips">선택팁</a>
+        <a href="#contact">제휴문의</a>
+      </div>
       <button class="theme-toggle" id="themeToggle" title="다크모드 전환">
         <span class="icon">🌙</span>
       </button>
-    </header>
+    </div>
+  </nav>
 
-    <div class="controls">
-      <label for="countInput">추첨 게임 수</label>
-      <div class="count-wrapper">
-        <button class="count-btn" id="decreaseBtn">−</button>
-        <span class="count-display" id="countDisplay">1</span>
-        <button class="count-btn" id="increaseBtn">+</button>
-      </div>
-      <span class="count-hint">최소 1개 · 최대 10개</span>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>🎱 로또 번호 자동생성기</h1>
+      <p class="hero-sub">1~10게임 동시 추첨 · 한국 로또 6/45 공식 규칙 적용 · 완전 무작위 생성</p>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Ad: 상단 -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5570666195506674" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <button class="draw-btn" id="drawBtn">
-      <span class="btn-text">번호 추첨</span>
-    </button>
+    <!-- Generator -->
+    <section id="generator" class="card">
+      <h2 class="section-title">🎰 번호 추첨</h2>
+      <p class="section-desc">추첨할 게임 수를 선택하고 버튼을 눌러보세요. 매번 새로운 번호가 생성됩니다.</p>
 
-    <div class="results" id="results"></div>
+      <div class="controls">
+        <label>추첨 게임 수</label>
+        <div class="count-wrapper">
+          <button class="count-btn" id="decreaseBtn">−</button>
+          <span class="count-display" id="countDisplay">1</span>
+          <button class="count-btn" id="increaseBtn">+</button>
+        </div>
+        <span class="count-hint">최소 1개 · 최대 10개</span>
+      </div>
 
-    <button class="reset-btn" id="resetBtn" style="display:none;">초기화</button>
+      <button class="draw-btn" id="drawBtn">
+        <span class="btn-text">번호 추첨하기</span>
+      </button>
 
-    <section class="contact-section">
-      <h2 class="contact-title">📩 제휴 문의</h2>
+      <div class="results" id="results"></div>
+      <button class="reset-btn" id="resetBtn" style="display:none;">초기화</button>
+    </section>
+
+    <!-- Ad: 중단 -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5570666195506674" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Lotto Info -->
+    <section id="info" class="card">
+      <h2 class="section-title">📊 로또 6/45 당첨 정보</h2>
+      <p class="section-desc">대한민국 로또 6/45는 1~45번 공 중 6개를 맞히는 복권입니다. 매주 토요일 추첨이 진행됩니다.</p>
+
+      <h3 class="sub-title">당첨 등급 및 확률</h3>
+      <div class="table-wrap">
+        <table class="info-table">
+          <thead>
+            <tr><th>등급</th><th>조건</th><th>당첨 확률</th><th>예상 당첨금</th></tr>
+          </thead>
+          <tbody>
+            <tr class="rank-1"><td>1등</td><td>6개 일치</td><td>1 / 8,145,060</td><td>평균 20억 원 이상</td></tr>
+            <tr class="rank-2"><td>2등</td><td>5개 + 보너스</td><td>1 / 1,357,510</td><td>평균 5천만 원대</td></tr>
+            <tr class="rank-3"><td>3등</td><td>5개 일치</td><td>1 / 35,724</td><td>평균 150만 원대</td></tr>
+            <tr class="rank-4"><td>4등</td><td>4개 일치</td><td>1 / 733</td><td>고정 5만 원</td></tr>
+            <tr class="rank-5"><td>5등</td><td>3개 일치</td><td>1 / 45</td><td>고정 5천 원</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 class="sub-title" style="margin-top:28px;">로또 구매 기본 정보</h3>
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="info-icon">📅</span>
+          <strong>추첨일</strong>
+          <span>매주 토요일 오후 8시 35분</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">💰</span>
+          <strong>1게임 가격</strong>
+          <span>1,000원</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🎯</span>
+          <strong>번호 범위</strong>
+          <span>1번 ~ 45번</span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🏆</span>
+          <strong>당첨금 배분</strong>
+          <span>판매액의 50% 지급</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips" class="card">
+      <h2 class="section-title">💡 로또 번호 선택 팁</h2>
+      <p class="section-desc">로또는 완전한 확률 게임입니다. 하지만 아래 내용을 참고하면 보다 현명하게 즐길 수 있습니다.</p>
+
+      <div class="tips-list">
+        <div class="tip-item">
+          <div class="tip-num">01</div>
+          <div class="tip-body">
+            <strong>자동 번호를 활용하세요</strong>
+            <p>컴퓨터가 무작위로 생성한 번호는 사람의 심리적 편향 없이 고르게 분포됩니다. 본 사이트의 추첨기는 Fisher-Yates 알고리즘으로 완전한 무작위를 보장합니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">02</div>
+          <div class="tip-body">
+            <strong>여러 게임을 구매할수록 확률이 높아집니다</strong>
+            <p>5등(3개 일치) 당첨 확률은 1/45로 비교적 높습니다. 5게임 구매 시 약 22% 확률로 5등 이상에 당첨될 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">03</div>
+          <div class="tip-body">
+            <strong>생일·기념일 번호는 피하세요</strong>
+            <p>1~31번에 집중된 번호는 많은 사람이 선택합니다. 1등 당첨 시 동일 번호 구매자와 금액을 나눠야 하므로, 32~45번 번호도 포함하는 것이 유리합니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">04</div>
+          <div class="tip-body">
+            <strong>연속 번호나 배수 번호는 실제로도 나옵니다</strong>
+            <p>1, 2, 3, 4, 5, 6처럼 보이는 번호도 이론상 다른 번호와 동일한 확률입니다. 특정 패턴을 피할 필요는 없습니다.</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <div class="tip-num">05</div>
+          <div class="tip-body">
+            <strong>합리적인 금액 내에서 즐기세요</strong>
+            <p>로또는 소액 오락입니다. 과도한 금액 투자보다 정해진 예산 내에서 즐기는 것이 건전한 복권 문화입니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card">
+      <h2 class="section-title">❓ 자주 묻는 질문</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">이 사이트의 번호는 진짜 무작위인가요?</button>
+          <div class="faq-a">
+            <p>네. Fisher-Yates 셔플 알고리즘과 JavaScript의 <code>Math.random()</code>을 사용해 1~45번 숫자를 완전 무작위로 섞습니다. 매번 독립적으로 동작하며, 이전 결과와 어떠한 연관도 없습니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">보너스 번호는 무엇인가요?</button>
+          <div class="faq-a">
+            <p>실제 로또에서는 6개 당첨 번호 외에 1개의 보너스 번호를 추가로 뽑습니다. 5개 번호가 맞고 보너스 번호까지 맞으면 2등입니다. 본 추첨기도 이를 반영해 보너스 번호를 함께 생성합니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">한 번에 최대 몇 게임까지 추첨할 수 있나요?</button>
+          <div class="faq-a">
+            <p>최대 10게임까지 동시 추첨이 가능합니다. 실제 로또 1회 구매 최대 가능 게임 수와 동일합니다.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">로또 당첨금은 언제까지 수령해야 하나요?</button>
+          <div class="faq-a">
+            <p>로또 당첨금 청구 기한은 추첨일로부터 1년입니다. 기한이 지나면 당첨금을 수령할 수 없으므로 구매 후 반드시 번호를 확인하세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ad: 하단 -->
+    <div class="ad-wrap">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5570666195506674" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <h2 class="section-title">📩 제휴 문의</h2>
+      <p class="section-desc">광고 제휴, 콘텐츠 협업 등 다양한 문의를 환영합니다.</p>
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqeyedrg" method="POST">
         <div class="form-group">
           <label for="name">이름 / 회사명</label>
@@ -57,8 +228,9 @@
       </form>
     </section>
 
-    <section class="disqus-section">
-      <h2 class="contact-title">💬 댓글</h2>
+    <!-- Disqus -->
+    <section class="card">
+      <h2 class="section-title">💬 댓글</h2>
       <div id="disqus_thread"></div>
       <script>
         var disqus_config = function () {
@@ -74,7 +246,35 @@
       </script>
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
-  </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="nav-logo">🎱 LottoCreate</span>
+          <p>대한민국 로또 6/45 번호 무료 자동생성 서비스</p>
+        </div>
+        <div class="footer-links">
+          <a href="#generator">번호추첨</a>
+          <a href="#info">당첨정보</a>
+          <a href="#tips">선택팁</a>
+          <a href="#contact">제휴문의</a>
+          <a href="#privacy">개인정보처리방침</a>
+        </div>
+      </div>
+      <div class="footer-privacy" id="privacy">
+        <h4>개인정보처리방침</h4>
+        <p>본 사이트는 제휴 문의 시 입력한 이름·이메일·문의 내용을 Formspree를 통해 수집하며, 문의 응대 목적 외에는 사용하지 않습니다. 본 사이트는 Google AdSense를 통해 광고를 게재하며, 광고 제공을 위해 쿠키가 사용될 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요. 댓글 서비스는 Disqus가 제공하며, Disqus의 개인정보 정책이 적용됩니다.</p>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LottoCreate. 본 사이트는 오락 목적으로 운영되며 실제 당첨을 보장하지 않습니다.</p>
+        <p>로또 구매는 복권 판매점 또는 <a href="https://dhlottery.co.kr" target="_blank" rel="noopener">동행복권 공식 사이트</a>를 이용해 주세요.</p>
+      </div>
+    </div>
+  </footer>
 
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
