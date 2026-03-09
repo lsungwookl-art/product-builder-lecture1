@@ -1,14 +1,39 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
+  <title>로또 번호 추첨기</title>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
+  <div class="container">
+    <header>
+      <h1>🎱 로또 번호 추첨기</h1>
+      <button class="theme-toggle" id="themeToggle" title="다크모드 전환">
+        <span class="icon">🌙</span>
+      </button>
+    </header>
+
+    <div class="controls">
+      <label for="countInput">추첨 게임 수</label>
+      <div class="count-wrapper">
+        <button class="count-btn" id="decreaseBtn">−</button>
+        <span class="count-display" id="countDisplay">1</span>
+        <button class="count-btn" id="increaseBtn">+</button>
+      </div>
+      <span class="count-hint">최소 1개 · 최대 10개</span>
+    </div>
+
+    <button class="draw-btn" id="drawBtn">
+      <span class="btn-text">번호 추첨</span>
+    </button>
+
+    <div class="results" id="results"></div>
+
+    <button class="reset-btn" id="resetBtn" style="display:none;">초기화</button>
+  </div>
+
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>

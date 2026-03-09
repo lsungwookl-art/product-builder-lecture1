@@ -1,1 +1,257 @@
-/* Add styles here */
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #f0f4ff;
+  --surface: #ffffff;
+  --surface2: #f8faff;
+  --text: #1a1a2e;
+  --text-sub: #555577;
+  --border: #dde3f0;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --shadow: 0 4px 24px rgba(79, 70, 229, 0.12);
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.07);
+  --ball-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f1a;
+  --surface: #1a1a2e;
+  --surface2: #16213e;
+  --text: #e8e8ff;
+  --text-sub: #9999bb;
+  --border: #2a2a4a;
+  --primary: #6366f1;
+  --primary-hover: #818cf8;
+  --shadow: 0 4px 24px rgba(99, 102, 241, 0.2);
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.3);
+  --ball-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', 'Apple SD Gothic Neo', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px 80px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.theme-toggle {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.theme-toggle:hover { transform: scale(1.1); box-shadow: var(--shadow); }
+
+/* ===== Controls ===== */
+.controls {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.controls label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.count-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.count-btn {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s;
+  user-select: none;
+}
+.count-btn:hover { background: var(--primary); color: #fff; }
+.count-btn:active { transform: scale(0.93); }
+.count-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.count-btn:disabled:hover { background: var(--bg); color: var(--primary); }
+
+.count-display {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  min-width: 40px;
+  text-align: center;
+  line-height: 1;
+}
+
+.count-hint {
+  font-size: 0.8rem;
+  color: var(--text-sub);
+}
+
+/* ===== Draw Button ===== */
+.draw-btn {
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+  letter-spacing: 0.5px;
+}
+.draw-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,70,229,0.3); }
+.draw-btn:active { transform: translateY(0); }
+.draw-btn.drawing { opacity: 0.7; cursor: not-allowed; pointer-events: none; }
+
+/* ===== Results ===== */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.game-card {
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 18px 22px;
+  box-shadow: var(--shadow-card);
+  animation: slideIn 0.4s ease both;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.game-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-sub);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== Lottery Balls ===== */
+.ball {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: var(--ball-shadow);
+  animation: popIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  flex-shrink: 0;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.3) rotate(-20deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* 번호별 색상 (한국 로또 공식 색상) */
+.ball.range-1  { background: radial-gradient(circle at 35% 35%, #ffdd57, #f0a500); color: #5a3a00; } /* 1~10: 노랑 */
+.ball.range-2  { background: radial-gradient(circle at 35% 35%, #5fc3e4, #1a8fc4); }                 /* 11~20: 파랑 */
+.ball.range-3  { background: radial-gradient(circle at 35% 35%, #ff7f7f, #e03030); }                 /* 21~30: 빨강 */
+.ball.range-4  { background: radial-gradient(circle at 35% 35%, #aaa, #555); }                       /* 31~40: 회색 */
+.ball.range-5  { background: radial-gradient(circle at 35% 35%, #8be08b, #2e8b2e); }                 /* 41~45: 초록 */
+
+.ball.bonus {
+  position: relative;
+  box-shadow: 0 0 0 3px var(--primary), var(--ball-shadow);
+}
+
+.divider {
+  font-size: 1.2rem;
+  color: var(--text-sub);
+  font-weight: 300;
+  margin: 0 2px;
+}
+
+/* ===== Reset Button ===== */
+.reset-btn {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.reset-btn:hover { background: var(--surface); color: var(--text); }
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  .ball { width: 40px; height: 40px; font-size: 0.85rem; }
+}
