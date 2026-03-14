@@ -251,8 +251,37 @@ body {
   50% { transform: translateY(-8px); }
 }
 
-/* === Ad Banner === */
-.ad-wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1.25rem; }
+/* === Ad Units === */
+.ad-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+/* Hero 바로 아래: 배경 구분을 위해 약간 다른 배경 */
+.ad-hero {
+  background: var(--bg-alt);
+  max-width: 100%;
+  padding: 1.25rem 0;
+}
+.ad-hero ins { max-width: 1200px; margin: 0 auto; display: block; }
+
+/* 섹션 사이 구분 광고 */
+.ad-between {
+  background: var(--bg-alt);
+  max-width: 100%;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ad-between ins { max-width: 1200px; margin: 0 auto; display: block; padding: 0 1.25rem; }
+
+/* 섹션 내부 하단 인피드 */
+.ad-infeed {
+  margin-top: 2rem;
+  padding: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
 
 /* === Singers Grid === */
 .singers-grid {
