@@ -47,6 +47,7 @@
         <li><a href="#news">최신소식</a></li>
         <li><a href="#videos">뮤직비디오</a></li>
         <li><a href="#schedule">일정</a></li>
+        <li><a href="#contact">제휴문의</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">🌙</button>
       <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
@@ -56,6 +57,7 @@
       <a href="#news">최신소식</a>
       <a href="#videos">뮤직비디오</a>
       <a href="#schedule">일정</a>
+      <a href="#contact">제휴문의</a>
     </div>
   </nav>
 
@@ -164,6 +166,68 @@
       </div>
       <div class="sns-grid" id="snsGrid">
         <!-- JS로 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">제휴 문의</h2>
+        <p class="section-sub">광고·협찬·콘텐츠 제휴 등 문의를 남겨주세요</p>
+      </div>
+      <div class="contact-wrap">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mqeyldkj" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">이름 / 회사명 <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="홍길동 / (주)트로트엔터" required />
+            </div>
+            <div class="form-group">
+              <label for="email">이메일 <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">연락처</label>
+              <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="category">문의 유형 <span class="required">*</span></label>
+              <select id="category" name="category" required>
+                <option value="" disabled selected>문의 유형을 선택하세요</option>
+                <option value="광고">광고 제휴</option>
+                <option value="협찬">협찬·PPL</option>
+                <option value="콘텐츠">콘텐츠 제휴</option>
+                <option value="이벤트">이벤트·공연 협력</option>
+                <option value="기타">기타</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">문의 내용 <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="문의 내용을 자세히 입력해 주세요." required></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">개인정보 수집 및 이용에 동의합니다.</label>
+          </div>
+          <div id="formMsg" class="form-msg" aria-live="polite"></div>
+          <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+            문의 보내기 ✉️
+          </button>
+        </form>
+        <div class="contact-info">
+          <h3>안내사항</h3>
+          <ul>
+            <li>📧 접수 후 <strong>2 영업일</strong> 내 답변 드립니다.</li>
+            <li>📣 광고 및 협찬 문의는 이메일과 함께 제안서를 첨부해 주시면 빠른 검토가 가능합니다.</li>
+            <li>⚠️ 스팸성 문의나 무관한 홍보는 답변이 어렵습니다.</li>
+            <li>🔒 입력하신 개인정보는 문의 답변 목적으로만 사용됩니다.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

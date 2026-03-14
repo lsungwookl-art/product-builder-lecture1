@@ -382,6 +382,44 @@ function initScrollAnim() {
   });
 }
 
+// ── 제휴 문의 폼 ──────────────────────────────────────────
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('formMsg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = '전송 중...';
+    msg.className = 'form-msg';
+    msg.textContent = '';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        msg.className = 'form-msg success';
+        msg.textContent = '✅ 문의가 성공적으로 접수되었습니다. 2 영업일 내 답변 드리겠습니다!';
+        form.reset();
+      } else {
+        throw new Error('server');
+      }
+    } catch {
+      msg.className = 'form-msg error';
+      msg.textContent = '❌ 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '문의 보내기 ✉️';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+}
+
 // ── 초기화 ───────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', async () => {
   initTheme();
@@ -391,6 +429,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   renderVideos();
   renderSchedule();
   renderSNS();
+  initContactForm();
   initNewsTabs();
   initScrollAnim();
 
