@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>트로트 스타 팬사이트 | 임영웅·영탁·김호중·이찬원·정동원·장민호·박지현·김희재</title>
+  <meta name="description" content="임영웅, 영탁, 김호중, 이찬원, 정동원, 장민호, 박지현, 김희재 등 인기 트로트 가수들의 최신 소식, 사진, 영상, 콘서트 정보를 한눈에!" />
+  <meta name="keywords" content="임영웅, 영탁, 김호중, 이찬원, 정동원, 장민호, 박지현, 김희재, 트로트, 트로트가수, 팬사이트, 미스터트롯" />
+  <meta name="author" content="TrotStar Fan" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-adsense-account" content="ca-pub-5570666195506674" />
+
+  <meta property="og:title" content="트로트 스타 팬사이트 | 인기 트로트 가수 최신 소식" />
+  <meta property="og:description" content="임영웅, 영탁, 김호중, 이찬원 등 인기 트로트 가수들의 소식과 영상을 한 곳에서!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://along-e-80837464-bdeba.web.app/" />
+  <meta property="og:locale" content="ko_KR" />
+  <link rel="canonical" href="https://along-e-80837464-bdeba.web.app/" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3WTKRPQS0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X3WTKRPQS0');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5570666195506674" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar" role="navigation" aria-label="주요 메뉴">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">🎤 트로트스타</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#singers">가수소개</a></li>
+        <li><a href="#news">최신소식</a></li>
+        <li><a href="#videos">뮤직비디오</a></li>
+        <li><a href="#schedule">일정</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">🌙</button>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#singers">가수소개</a>
+      <a href="#news">최신소식</a>
+      <a href="#videos">뮤직비디오</a>
+      <a href="#schedule">일정</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-sub">대한민국 트로트의 별들</p>
+      <h1 class="hero-title">트로트 스타 팬사이트</h1>
+      <p class="hero-desc">임영웅·영탁·김호중·이찬원·정동원·장민호·박지현·김희재<br>최신 소식과 영상을 한 곳에서 만나보세요</p>
+      <div class="hero-btns">
+        <a href="#news" class="btn btn-primary">최신 소식 보기</a>
+        <a href="#singers" class="btn btn-outline">가수 소개 보기</a>
+      </div>
+    </div>
+    <div class="hero-emoji-row" aria-hidden="true">
+      <span>🎤</span><span>🎵</span><span>⭐</span><span>🎶</span><span>🏆</span><span>🎵</span><span>🎤</span>
+    </div>
+  </section>
+
+  <!-- ===== Ad Banner ===== -->
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5570666195506674" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- ===== Singers ===== -->
+  <section class="section" id="singers">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">가수 소개</h2>
+        <p class="section-sub">대한민국을 대표하는 트로트 스타들</p>
+      </div>
+      <div class="singers-grid" id="singersGrid">
+        <!-- JS로 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== News ===== -->
+  <section class="section section-alt" id="news">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">최신 소식</h2>
+        <p class="section-sub">실시간 뉴스 & 업데이트</p>
+      </div>
+
+      <!-- 가수 탭 -->
+      <div class="tabs" id="newsTabs" role="tablist">
+        <button class="tab active" data-singer="all" role="tab" aria-selected="true">전체</button>
+        <button class="tab" data-singer="임영웅" role="tab">임영웅</button>
+        <button class="tab" data-singer="영탁" role="tab">영탁</button>
+        <button class="tab" data-singer="김호중" role="tab">김호중</button>
+        <button class="tab" data-singer="이찬원" role="tab">이찬원</button>
+        <button class="tab" data-singer="정동원" role="tab">정동원</button>
+        <button class="tab" data-singer="장민호" role="tab">장민호</button>
+        <button class="tab" data-singer="박지현" role="tab">박지현</button>
+        <button class="tab" data-singer="김희재" role="tab">김희재</button>
+      </div>
+
+      <div class="news-status" id="newsStatus">뉴스를 불러오는 중...</div>
+      <div class="news-grid" id="newsGrid"></div>
+
+      <div class="ad-wrap" style="margin-top:2rem;">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5570666195506674" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Videos ===== -->
+  <section class="section" id="videos">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">뮤직비디오</h2>
+        <p class="section-sub">인기 트로트 노래 모음</p>
+      </div>
+      <div class="video-tabs" id="videoTabs">
+        <!-- JS로 렌더링 -->
+      </div>
+      <div class="video-grid" id="videoGrid">
+        <!-- JS로 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Schedule ===== -->
+  <section class="section section-alt" id="schedule">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">예정 일정</h2>
+        <p class="section-sub">콘서트 · 팬미팅 · 방송 출연</p>
+      </div>
+      <div class="schedule-list" id="scheduleList">
+        <!-- JS로 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SNS Links ===== -->
+  <section class="section sns-section" id="sns">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">공식 채널</h2>
+        <p class="section-sub">유튜브, 인스타그램, 팬카페로 바로가기</p>
+      </div>
+      <div class="sns-grid" id="snsGrid">
+        <!-- JS로 렌더링 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">🎤 트로트스타</div>
+        <p class="footer-desc">
+          이 사이트는 팬이 운영하는 비공식 팬사이트입니다.<br>
+          모든 이미지·영상 저작권은 해당 소속사에 있습니다.
+        </p>
+        <div class="footer-links">
+          <a href="#singers">가수소개</a>
+          <a href="#news">최신소식</a>
+          <a href="#videos">뮤직비디오</a>
+        </div>
+        <p class="footer-copy">© 2025 TrotStar Fan Site. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
